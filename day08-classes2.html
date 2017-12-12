@@ -1,0 +1,25 @@
+<head>
+	<title>Classes 2</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>第八節，講座十五</h1>
+        <br><br>
+
+        <p>在 class 裡面的函數如果有提到「self」，這個「self」代表指向該class物件。</p>
+        <p>如果有class物件要call function，「def func(self,arg_1,arg_2)」之後被使用時，其中的 self 可提可不提：「func(arg_1,arg_2)」</p>
+        <p>function 在被定義時需要的一般argument，稱為「positional argument」。</p>
+        <p>所有 function 在被定義時的 argument，在使用時都必須賦值，除了 self 和 key word argument。</p>
+        <p>「key word argument」在函數被定義時，就先給他值了，例如：「def func(self,arg_1,arg_2, kwarg_1=None)」。</p>
+        <p>「key word argument」定義時必須放在一般 argument 之後。</p>
+        <br>
+        <p>一般的class function 被使用的形式是「cls_obj.func()」，可以在該內部函數被定義時前一行加入「@property」，
+            使該內部函數可以被這樣使用「cls_obj.func」，成為一個和 return 值同樣屬性的物件。</p>
+        <p>並且該「cls_obj.func()」已經無法使用，「cls_obj.func」就是代表它所 return 的值，例如一個字串或是數字。</p>
+        
+
+    <p><a href="index.html">回首頁</a></p>
+</body>
+</html>
