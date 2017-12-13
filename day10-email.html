@@ -1,0 +1,45 @@
+<head>
+	<title>Setup Python to Send Email with Gmail</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>第八節，講座十八</h1>
+        <br><br>
+
+        <p>有個叫做「SendGrid」的網站提供有關 email 客製的資源。</p>
+        <p>先確保gmail帳號的IMAP是啟動的。</p>
+        <p>會用到「smtplib」和「gmail」這兩個 python 內建的 library。</p>
+        <br>
+        <p>在「cumtom.py」這裡會設定：</p>
+            <ol>
+            &emsp;<li>host = "smtp.gmail.com"</li>
+            &emsp;<li>port = 587</li>
+            &emsp;<li>username =  "xxxxx@gmail.com"</li>
+            &emsp;<li>password = "xxxxxxx"</li>
+            </ol>
+        <p>根據不同的email會有些微差異。</p>
+        <p>然後用以下這句來檢測是否連接成功：</p>
+        &emsp;email_conn = smtplib.SMTP(host,port)
+        <p>成功的話，輸入「email_conn.ehlo()」會出現一段 at service 的文字訊息。</p>
+        <br>
+        <p>接著需要傳輸協定認證，這裏是用TLS：「email_conn.starttls()」出現一段準備開始啟動TLS就代表成功。</p>
+        <br>
+        <p>然後就能登入：「email_conn.login(username,password)」出現 Accepted 代表成功。</p>
+        <p>只要一輸入「email_conn.quit()」就代表斷開連結，必須重新從host和port那邊登入。</p>
+        <br><br>
+
+        <p>寄信是用「email_conn.sendmail(from_email, to_list, "Messeage")」。</p>
+        <p>「from_email」是一個代表寄件者的字串，「to_list」是一個字串的list 代表收件者信箱，「"Message"」則是信件文字內容。</p>
+        <p>若是沒出現錯誤訊息就是代表寄件成功。</p>
+        <p>事實上因為gmail 安全性問題我沒有登入成功。</p>
+        <br>
+        <p>之前是用「import smtplib」之後使用smtplib裡面的SMTP，也可以改為「from smtplib import SMTP」就能直接使用SMTP。</p>
+        <p>用「try: something」「except: print("error")」的方式就能用自訂的error message 取代系統內設的。</p>
+        
+        
+
+    <p><a href="index.html">回首頁</a></p>
+</body>
+</html>
