@@ -1,0 +1,23 @@
+<head>
+	<title>HTML &amp; Plain Text Emails through Python and Gmail</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>第八節，講座十九</h1>
+        <br><br>
+
+        <p>上一節的 email 是純文字訊息，要傳 html 訊息的話必須：</p>
+        &emsp;<p>「from email.mime.multipart import MIMEMultipart」。</p>
+        &emsp;<p>「from email.mime.text import MIMEText」。</p>
+        <br>
+        <p>「the_msg = MIMEMultipart("alternative")」代表這段文字是 HTML 格式。</p>
+        <p>「MIMEText(some_txt,'plain')」代表將 some_txt 轉換成純文字。</p>
+        <p>「MIMEText(some_txt,"html")」代表將 some_txt 轉換成 html 格式。</p>
+        <p>string 物件加上「.attach(other_string)」可以附加另一段上去。</p>
+        
+
+    <p><a href="index.html">回首頁</a></p>
+</body>
+</html>
