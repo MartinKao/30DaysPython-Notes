@@ -1,0 +1,22 @@
+<head>
+	<title>Using External Templete Files with Content Data in Python</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>第八節，講座二十一</h1>
+        <br><br>
+
+        <p>「import os」可以讓 python 有讀取檔案路徑的能力。</p>
+        <p>mac os 的路徑會是「a/b/c/ddd.txt」，windows 的路徑會是「a\b\c\ddd.txt」的格式。</p>
+        <p>path 可以先隨便寫一種，之後透過「file_path = os.path.join(os.getcwd(),path)」把它自動轉換成電腦能辨認的格式。</p>
+        <p>「os.getcwd()」會回傳目前所在的檔案路徑，因此以上敘述就是讀取目前.py檔所在位置 append 上資料夾內所需的檔案路徑。</p>
+        <p>檔案路徑最前端不可以加「/」不然會出現錯誤判斷。</p>
+        <p>可以用「os.path.isfile(file_path)」來判斷此檔案路徑的檔案是否存在。</p>
+
+        
+
+    <p><a href="index.html">回首頁</a></p>
+</body>
+</html>
