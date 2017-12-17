@@ -1,0 +1,28 @@
+<head>
+	<title>CSV Files with Python Read, Write, &amp; Append</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>第八節，講座二十二</h1>
+        <br><br>
+
+        <p>「import csv」後可以使用 csv 相關內容。</p>
+        <p>「with open("xxx.csv","w+") as csv_file:」此處的「with ... as ...:」用 csv_file 代表被打開的 xxx.csv。</p>
+        <p>「"w+"」是一種打開檔案的方式，有很多種。「"w+"」代表直接覆蓋，若檔案不存在則創造。「"a"」代表 append，直接將內容附加在原有檔案最後方。</p>
+        <p>「var_a = csv.writer(csv_file)」先用一個變數 var_a 儲存 csv 的 write 功能，儲存位置是 csv_file。</p>
+        <p>「var_a.writerow(["title","description1"])」用「.writerow(list)」可以儲存 list 進去，第一行自動成為屬性名稱。</p>
+        <p>使用「csv.reader(csv_file)」可以將 csv 檔的資料讀取成 list。</p>
+        <p>使用「csv.DictReader(csv_file)」可以將 csv 檔的資料讀成 dictionary，first row 的資料會被當成 key。</p>
+        <p>「csv.DictWriter(csv_file,fieldnames=[...])」則可以寫入 dictionary 值，「[...]」要填入 key 的 list。</p>
+        <p>寫入 dictionary 值的時候不會自動填上 key 在第一列，所以要用「.writeheader()」附加上去。</p>
+        
+
+        
+
+        
+
+    <p><a href="index.html">回首頁</a></p>
+</body>
+</html>
