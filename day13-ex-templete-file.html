@@ -14,6 +14,12 @@
         <p>「os.getcwd()」會回傳目前所在的檔案路徑，因此以上敘述就是讀取目前.py檔所在位置 append 上資料夾內所需的檔案路徑。</p>
         <p>檔案路徑最前端不可以加「/」不然會出現錯誤判斷。</p>
         <p>可以用「os.path.isfile(file_path)」來判斷此檔案路徑的檔案是否存在。</p>
+        <br>
+        <p>「open(file_path).read()」可以讀取檔案內容。</p>
+        <p>在讀取的內容後加上「.format(a="",b="",c="")」就可以替換讀取內容的部份字串。</p>
+        <p>這種替換字串的方式是用 dictionary 值，所以每一項都要替換到不然會發生錯誤。</p>
+        <p>也可以用「.format(**content)」來替換，content 為一個 dictionary，「**」專門用在 dictionary 值。</p>
+        
 
         
 
