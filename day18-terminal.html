@@ -8,7 +8,27 @@
     <h1>第八節，講座二十七</h1>
         <br><br>
 
-		
+        <p>在資料夾裡加入「__init__.py」可以讓資料夾變成可被 import 的格式。但無法被直接執行。</p>
+        <p>除了 init 還要加入「__main__.py」，就可以使 python 直接執行該資料夾，執行內容則是 main 裡的程式碼。</p>
+        <p>「__main__.py」可以直接「from 同層資料夾的.py檔 import some_class」。</p>
+        <br>
+        <p>「os.path.join(getcsd(),"filename")」會讀到「執行 python 程式的那層的 file」。</p>
+        <p>「os.path.join(os.path.dirname(__file__),"filename")」會讀到「執行該行 python 程式碼的那層的 file」。</p>
+        <p>因此在「__main__.py」的應用時，要把想讀取的檔案放在同資料夾內，而不是拖出去的話，就要用後者。</p>
+        <br><br>
+
+        <p>為了要讓 python 在 command line 讀取我們輸入的參數，必須要「from argparse import ArgumentParser」。</p>
+        <p>首先設定一個 parser「parser = ArgumentParser(prog="__main__.py所屬資料夾名稱")」。</p>
+        <p>接下來透過「parser.add_argument(...)」可以設定我們要在終端機輸入的參數有哪些。</p>
+        <p>「parser.add_argument("type", type=str, choices=['mode_a','mode_b'])」代表
+            我們可以輸入 mode_a 進入 mode_a 條件模式(之後會用「if arg.type == "mode_a":」這樣的方式選擇我們要的操作)。
+            或是選擇 mode_b 模式。輸入的值會存在「args.type」</p>
+        <p>「parser.add_argument('-id','--user_id',type=int)」可以讓我們在輸入想要的 user_id 的時候，
+            透過輸入「-id 100」讓我們的「args.user_id」的值等於 100。</p>
+        <p>上面這種帶有一個「-」的 argument 在輸入時是不分先後的，只要前面輸入該項目的代表字串即可。
+            「"type"」這類沒有"-"的 argument 就會按照順序讀取我們輸入的字串，當作判斷的依據。</p>
+        <p>之所以存在「args」是因為在 argument 設定好之後，令「args = parser.parse_args()」，
+            代表 args 現在是接收終端機指令的變數。</p>
 		
 
     <p><a href="index.html">回首頁</a></p>
