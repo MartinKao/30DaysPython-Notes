@@ -1,0 +1,22 @@
+<head>
+	<title>Edit CSV with Python Part1, Part2</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>第八節，講座二十四、二十五</h1>
+        <br><br>
+
+        <p>一筆一筆資料輸入進 csv 不好，最好是先提取原有檔案，形成暫時檔案，然後附加新資料到暫時檔案上，如果沒有發生錯誤，
+			就將暫時檔案存回原有檔案上。</p>
+		<p>需要「import shutil」以及「from tepfile import NamedTemporaryFile」。</p>
+		<p>「temp_file = NamedTemporaryFile(delete=False)」代表製造了一個暫存檔變數 temp_file，存在某個不知道的地方。</p>
+		<p>「temp_file.name」代表 temp_file 這個暫存檔實際儲存的路徑和檔名。</p>
+		<p>「shutil.move(temp_file.name, filename)」代表將暫存檔存取代 filename 這個檔案。</p>
+		<p>參考作者的這份檔案：https://github.com/codingforentrepreneurs/30-Days-of-Python/blob/master/Day%2016/hungrypy/hungry_data.py</p>
+		
+
+    <p><a href="index.html">回首頁</a></p>
+</body>
+</html>
