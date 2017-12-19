@@ -1,4 +1,5 @@
 import smtplib
+import os
 
 host = "smtp.gmail.com"
 port = 587
@@ -7,6 +8,8 @@ password = "xxxxx"
 from_email = username
 to_list = ["a09087680373@gmail.com"]
 
+
+"""
 from smtplib import SMTP, SMTPAuthenticationError, SMTPException
 
 email_conn = SMTP(host,port)
@@ -20,4 +23,9 @@ except:
 
 email_conn.quit()
 
+"""
 
+path = os.path.dirname(__file__)
+
+upper_path = os.path.dirname(os.path.dirname(__file__))
+print(upper_path)
