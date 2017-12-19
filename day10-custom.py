@@ -29,3 +29,14 @@ path = os.path.dirname(__file__)
 
 upper_path = os.path.dirname(os.path.dirname(__file__))
 print(upper_path)
+
+apple = "good"
+
+class Buy():
+    def buy_it(input):
+        input_str = str(input)
+        ans = apple + input_str
+
+        return ans
+
+print (Buy.buy_it(" stuff"))
