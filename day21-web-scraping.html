@@ -9,6 +9,11 @@
         <br><br>
 
         <p>Google 的 ML 簡報：https://docs.google.com/presentation/d/1kSuQyW5DTnkVaZEjGYCkfOxvzCqGEFzWBy4e9Uedd9k/preview?imm_mid=0f9b7e&cmp=em-data-na-na-newsltr_20171213&slide=id.g22aaaf9c33_0_3</p>
+        <br>
+        <p>「import requests」「import beautifulsoup4」。</p>
+        <p>先將網址存成字串變數「url = "網址"」，然後「my_url = requests.get(url)」，此時 my_url 就會儲存「送出那個網址所得到的 html 檔」。</p>
+        <p>再用「my_url.status_code」如果 return 200 代表正常運作，用「my_url.text」可以看到所有程式碼內容。</p>
+        <p>「BeautifulSoup(my_url.text,'html.parser')」可以讓 html 檔變得容易閱讀。</p>
         <p>
         
 
