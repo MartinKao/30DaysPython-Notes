@@ -14,7 +14,8 @@
         <p>先將網址存成字串變數「url = "網址"」，然後「my_url = requests.get(url)」，此時 my_url 就會儲存「送出那個網址所得到的 html 檔」。</p>
         <p>再用「my_url.status_code」如果 return 200 代表正常運作，用「my_url.text」可以看到所有程式碼內容。</p>
         <p>「BeautifulSoup(my_url.text,'html.parser')」可以讓 html 檔變得容易閱讀。</p>
-        <p>
+        <p>「.prettify()」可以自動編排被 html parsed 的 變數，修正原有設計的缺失。</p>
+        <p>「.findAll('some_html_tag')」可以找出所有該類型 tag 的內容。</p>
         
 
     <p><a href="index.html">回首頁</a></p>
