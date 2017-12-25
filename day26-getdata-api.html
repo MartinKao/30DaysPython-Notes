@@ -8,7 +8,12 @@
     <h1>第十一節，講座三十六、三十七</h1>
         <br><br>
 
-        <p>要使用 key 認證，必須「import requests, requests_oauthlib」</p>
+        <p>要使用 key 認證，必須「import requests」「from requests_oauthlib import OAuth1」</p>
+        <p>「auth = OAuth1('app_key','app_secret','user_oauth_token','user_oauth_token_secret')」。</p>
+        <p>用 dictionary 值建立要搜尋的 params，可以使用的 key 的名稱會在網站上有說明。</p>
+        <p>之後建立 request 「r = requests.get(url,auth=auth, params=params)」</p>
+        <p>設計成 function 之後，可以「return r.json()」。之後就可以透過 dictionary key 來找到想要的資料。</p>
+        <p>若是有不確定的 key 名稱，可以使用「xxx.get('key_name')」，找不到則 return None。一般的「xxx['key_name']」則會發生 error。</p>
         
         
 
