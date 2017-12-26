@@ -10,7 +10,7 @@ a:visited {text-decoration: none;color:#DDDDDD;}
 a:hover {text-decoration: none;color: white;}
 a:active {text-decoration: none;color: white;}
 
-h1, h3, p {
+h1, h3, p, ol {
 	color: white;
 }
 
