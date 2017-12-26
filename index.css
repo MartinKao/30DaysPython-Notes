@@ -1,0 +1,43 @@
+body {
+	background-attachment: fixed;
+	background-image: url(images/wood_road.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+a:link{text-decoration: none;color:#AAAAAA;}
+a:visited {text-decoration: none;color:#DDDDDD;}
+a:hover {text-decoration: none;color: white;}
+a:active {text-decoration: none;color: white;}
+
+h1, h3, p {
+	color: white;
+}
+
+.main {
+	width: 60vw;
+	height: 95vh;
+	margin: 0px auto;
+	background-color: rgba(0,0,0,0.6);
+	padding: 10px; 
+	letter-spacing: 1px;
+	font-family: Microsoft JhengHei;
+	overflow: scroll;
+	border-style: solid;
+	border-color: rgba(0,0,0,0);
+	border-width: 20px;
+}
+
+.content {
+	width: 60vw;
+	height: 95vh;
+	margin: 0px auto;
+	background-color: rgba(0,0,0,0.6);
+	padding: 10px; 
+	letter-spacing: 1px;
+	font-family: Microsoft JhengHei;
+	overflow: scroll;
+	border-style: solid;
+	border-color: rgba(0,0,0,0);
+	border-width: 20px;
+}
